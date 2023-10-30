@@ -1,0 +1,50 @@
+
+
+.content-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content-title {
+    background-color: #aeb994; 
+    color: #F6D696; 
+    text-align: center;
+    padding: 5px;
+}
+
+.blog-post hr {
+    border: 1px solid #ccc; 
+    margin: 20px 0; 
+}
+
+.full-content {
+    display: none;
+    margin-top: 20px; 
+}
+
+.blog-post {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #F79805; 
+}
+
+.short-content {
+    font-size: 16px;
+}
+
+.read-more {
+    color: #FD5D5B; 
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #f44336; 
+}

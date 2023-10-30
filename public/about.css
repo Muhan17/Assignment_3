@@ -1,0 +1,28 @@
+
+.about-header {
+    background-color: #aeb994; 
+    color: #F6D696; 
+    text-align: center;
+    padding: 2px;
+}
+ h2 {
+    color: #CE1209;
+ }
+
+.about-content {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 87px;
+}
+
+
+.about-footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+}
+
+

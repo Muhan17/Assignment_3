@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Blog Post</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="newpost.css">
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+<body>
+    <%- include('navbar_layout.ejs') %>
+    <header>
+        <h1>Create a New Blog Post</h1>
+    </header>
+
+    <main>
+        <div class="post-form">
+            <h2 style="color: #CE1209;">Today's new post is...</h2>
+            <form action="/addpost" method="post">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" required>
+                <label for="content">Content:</label>
+                <textarea name="content" id="content" rows="4" cols="50" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <%- include('footer_layout.ejs') %>
+</body>
+</html>

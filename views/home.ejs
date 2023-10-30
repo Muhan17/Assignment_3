@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .full-content {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <%- include('navbar_layout.ejs') %>
+    <main class="content-container">
+        <div class="content-title"><h2>My Latest Blog Posts</h2></div>
+        <% blogPosts.forEach(post => { %>
+            <div class="blog-post">
+                <h3><%= post.title %></h3>
+                <p>
+                    <span class="short-content"><%= post.content.slice(0, 100) %></span>
+                    <span class="full-content"><%= post.content %></span>
+                </p>
+                <a href="#" class="read-more">Read More</a>
+                <hr>
+            </div>
+        <% }); %>
+    </main>
+    <%- include('footer_layout.ejs') %>
+    <script>
+        const readMoreButtons = document.querySelectorAll('.read-more');
+
+readMoreButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const postContainer = button.parentElement;
+        const shortContent = postContainer.querySelector('.short-content');
+        const fullContent = postContainer.querySelector('.full-content');
+
+        if (shortContent.style.display === 'none' || shortContent.style.display === '') {
+            shortContent.style.display = 'inline';
+            fullContent.style.display = 'none';
+            button.textContent = 'Read More';
+        } else {
+            shortContent.style.display = 'none';
+            fullContent.style.display = 'block';
+            button.textContent = 'Read Less';
+        }
+    });
+});
+    </script>
+</body>
+</html>
